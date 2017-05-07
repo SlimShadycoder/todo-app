@@ -1,0 +1,27 @@
+<h1>Fruit#index</h1>
+<style>html, body {
+background-color: blue
+} </style>
+<p>Find me in app/views/fruit/index.html.erb</p>
+<% list_of_products = [
+{ 
+    name: 'banana', 
+    price: 34, 
+    pic: 'https://media.mercola.com/assets/images/foodfacts/banana-og.jpg'
+    
+}, 
+{ name: 'apple', price: 22, pic: 'https://images.pexels.com/photos/39803/pexels-photo-39803.jpeg?h=350&auto=compress&cs=tinysrgb'}, 
+{ name: 'passionfruit', price: 50, pic: 'https://www.organicfacts.net/wp-content/uploads/passionfruit.jpg'}, 
+{name: 'lemon', price: 1, pic: 'https://www.organicfacts.net/wp-content/uploads/passionfruit.jpg'}
+] %>
+
+
+<% for fruit in list_of_products %>
+    <h1><%= fruit[:name] %></h1>
+    <h1>$<%=fruit[:price]%></h1>
+    <img src="<%=fruit[:pic]%>"/>
+<% end %>
+
+
+
+
